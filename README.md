@@ -3,6 +3,7 @@ Simple template for adding wordlists to your HTML pages
 
 ### features
 - extensible base for any vocabulary project
+- add / remove words easily
 - perfect for recycling vocabulary in ESL classrooms
 - tiny code / no external dependencies (vanilla javascript)
 - elegant, skeuomorphic responsive design

@@ -11,7 +11,7 @@ Simple template for adding wordlists to your HTML pages
 ![screenshot](http://monolithpl.github.io/domino-wizard/dominoes.png "screenshot")
 
 ### demo
-[check it out here](http://monolithpl.github.io/add.words/)
+[check it out here](http://monolithpl.github.io/add.words/add-words.png)
 
 ### source
 - optimized version of a [TodoMVC](http://todomvc.com/) todo app

@@ -8,10 +8,10 @@ Simple template for adding wordlists to your HTML pages
 - elegant, skeuomorphic responsive design
 
 ### screenshot / example
-![screenshot](http://monolithpl.github.io/domino-wizard/dominoes.png "screenshot")
+![screenshot](http://monolithpl.github.io/add.words/add-words.png "screenshot")
 
 ### demo
-[check it out here](http://monolithpl.github.io/add.words/add-words.png)
+[check it out here](http://monolithpl.github.io/add.words)
 
 ### source
 - optimized version of a [TodoMVC](http://todomvc.com/) todo app

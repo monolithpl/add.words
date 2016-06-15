@@ -1,16 +1,8 @@
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-form {
-    margin-bottom: 0em;
-}
 body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 0.6em;
 	color: #4d4d4d;
-	width: 550px;
+	width: 40%;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
@@ -126,12 +118,6 @@ body {
 	background: rgba(0, 0, 0, 0.02);
 	z-index: 2;
 	box-shadow: none;
-}
-
-#main {
-	position: relative;
-	z-index: 2;
-	border-top: 1px dotted #adadad;
 }
 
 #word-list {

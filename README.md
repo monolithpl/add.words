@@ -1,5 +1,5 @@
 # add words
-Simple template for adding wordlists to your HTML pages
+Micro component for adding wordlists to your web apps
 
 ### features
 - extensible base for any vocabulary project

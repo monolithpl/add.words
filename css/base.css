@@ -4,33 +4,38 @@ body {
 	color: #4d4d4d;
 	width: 40%;
 	margin: 0 auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-	font-smoothing: antialiased;
 }
-
+.edit {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	font-size: 14px;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: 1.4em;
+	border: 0;
+	outline: none;
+	color: inherit;
+	top:-14px;
+}
 #words {
 	background: #fff;
 	background: rgba(255, 255, 255, 0.9);
 	margin: 50px 0 40px 0;
-	border: 1px solid #ccc;
+	border: 1px solid black;
 	position: relative;
 	border-top-left-radius: 2px;
 	border-top-right-radius: 2px;
-	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
-				0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
-#words:before {
+#words:after {
 	content: '';
-	border-left: 1px solid #f5d6d6;
-	border-right: 1px solid #f5d6d6;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
 	width: 2px;
 	position: absolute;
 	top: 0;
-	left: 40px;
+	right: 40px;
 	height: 100%;
 }
 
@@ -53,11 +58,6 @@ body {
 	color: #b3b3b3;
 	color: rgba(255, 255, 255, 0.3);
 	text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
-	-webkit-text-rendering: optimizeLegibility;
-	-moz-text-rendering: optimizeLegibility;
-	-ms-text-rendering: optimizeLegibility;
-	-o-text-rendering: optimizeLegibility;
-	text-rendering: optimizeLegibility;
 }
 
 #header {
@@ -73,47 +73,23 @@ body {
 	left: 0;
 	height: 15px;
 	z-index: 2;
-	border-bottom: 1px solid #6c615c;
-	background: #8d7d77;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(132, 110, 100, 0.8)),to(rgba(101, 84, 76, 0.8)));
-	background: -webkit-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
-	background: -moz-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
-	background: -o-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
-	background: -ms-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
-	background: linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
+	border-bottom: 1px solid black;
+	background: #2a2a2a;
 	border-top-left-radius: 1px;
 	border-top-right-radius: 1px;
 }
 
-#word-new,
-.edit {
+#word-new {
 	position: relative;
 	margin: 0;
 	width: 100%;
 	font-size: 14px;
 	font-family: inherit;
 	line-height: 1.4em;
-	border: 0;
 	outline: none;
 	color: inherit;
-	padding: 6px;
 	border: 1px solid #999;
-	box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-}
-
-#word-new {
-	padding: 16px 16px 10px 60px;
+	padding: 16px 16px 10px 15px;
 	border: none;
 	background: rgba(0, 0, 0, 0.02);
 	z-index: 2;
@@ -136,22 +112,6 @@ body {
 	border-bottom: none;
 }
 
-#word-list li.editing {
-	border-bottom: none;
-	padding: 0;
-}
-
-#word-list li.editing .edit {
-	display: block;
-	width: 506px;
-	padding: 13px 17px 12px 17px;
-	margin: 0 0 0 43px;
-}
-
-#word-list li.editing .view {
-	display: none;
-}
-
 #word-list li .toggle {
 	text-align: center;
 	width: 40px;
@@ -170,7 +130,7 @@ body {
 #word-list li label {
 	word-break: break-word;
 	padding: 15px;
-	margin-left: 45px;
+	height: 10px;
 	display: block;
 	line-height: 0.6;
 	-webkit-transition: color 0.4s;
@@ -191,27 +151,16 @@ body {
 	background: none;
 	position: absolute;
 	top: 0;
-	right: 10px;
+	right: 2px;
 	bottom: 0;
 	width: 40px;
 	height: 40px;
 	margin: auto 0;
 	font-size: 22px;
-	color: #a88a8a;
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	-o-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
 #word-list li .destroy:hover {
-	text-shadow: 0 0 1px #000,
-				 0 0 10px rgba(199, 107, 107, 0.8);
-	-webkit-transform: scale(1.3);
-	-moz-transform: scale(1.3);
-	-ms-transform: scale(1.3);
-	-o-transform: scale(1.3);
 	transform: scale(1.3);
 }
 
@@ -223,12 +172,9 @@ body {
 	display: block;
 }
 
-#word-list li .edit {
-	display: none;
-}
-
-#word-list li.editing:last-child {
-	margin-bottom: -1px;
+#word-list li .destroy:active  {
+	outline: none !important;
+	color: red;
 }
 
 #footer {
@@ -241,19 +187,4 @@ body {
 	height: 20px;
 	z-index: 1;
 	text-align: center;
-}
-
-#footer:before {
-	content: '';
-	position: absolute;
-	right: 0;
-	bottom: 31px;
-	left: 0;
-	height: 40px;
-	z-index: -1;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
-				0 6px 0 -3px rgba(255, 255, 255, 0.8),
-				0 7px 1px -3px rgba(0, 0, 0, 0.3),
-				0 33px 0 -6px rgba(255, 255, 255, 0.8),
-				0 34px 2px -6px rgba(0, 0, 0, 0.2);
 }

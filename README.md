@@ -6,7 +6,7 @@ Micro component for adding wordlists to your web apps
 - add / remove words easily
 - perfect for recycling vocabulary in ESL classrooms
 - tiny code / no external dependencies (vanilla javascript)
-- elegant, skeuomorphic responsive design
+- elegant, flat and responsive design
 
 ### screenshot / example
 ![screenshot](http://monolithpl.github.io/add.words/add-words.png "screenshot")
@@ -14,10 +14,7 @@ Micro component for adding wordlists to your web apps
 ### demo
 [check it out here](http://monolithpl.github.io/add.words)
 
-### source
-- optimized version of a [TodoMVC](http://todomvc.com/) todo app
-
 MIT License
 
-Copyright 2016 Wiktor Jakubczyc
+Copyright 2016-7 Wiktor Jakubczyc
 

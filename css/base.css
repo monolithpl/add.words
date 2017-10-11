@@ -57,14 +57,11 @@ body {
 
 #words h1 {
 	position: absolute;
-	top: -65px;
+	top: -55px;
 	width: 100%;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
-	color: #b3b3b3;
-	color: rgba(255, 255, 255, 0.3);
-	text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
 }
 
 #words .edit {

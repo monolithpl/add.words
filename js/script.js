@@ -2,6 +2,7 @@ var newWord = document.getElementById("word-new")
 var list = document.getElementById("word-list")
 var count = document.getElementById("word-count")
 var edit = document.querySelector('.edit')
+var words = []
 
 window.qsa = function (selector, scope) {
 	return (scope || document).querySelectorAll(selector);
@@ -29,6 +30,18 @@ function updateCount(){
 	if (list.children.length > 1) count.innerHTML = list.children.length + ' words'
 	else if (list.children.length == 0) count.innerHTML = 'type word and hit enter to add'
 	else count.innerHTML = list.children.length + ' word'
+}
+
+function addWord(word){
+	if (word.trim() !== '' && words.indexOf(word) < 0) {
+		var entry = document.createElement('li')
+		entry.innerHTML = '<label class="listitem">' + word + '</label><button class="destroy"></button>'
+		list.insertBefore(entry, list.childNodes[0])
+		newWord.value = ''
+		updateCount()
+		words.push(word)
+	}
+	else newWord.value = ''
 }
 
 document.addEventListener("click", function(event) {
@@ -60,8 +73,7 @@ document.addEventListener("click", function(event) {
 })
 
 $delegate(list, 'li .edit', 'keyup', function (event) {
-	if (event.keyCode == 13 || event.keyCode == 27)
-	{
+	if (event.keyCode == 13 || event.keyCode == 27) {
 		var element = document.querySelector('.edit')
 		var text = element.value
 		element.parentNode.innerHTML = text
@@ -69,12 +81,15 @@ $delegate(list, 'li .edit', 'keyup', function (event) {
 })
 
 newWord.addEventListener("keypress", function(event) {
-    if (event.keyCode == 13 && newWord.value.trim() !== '')
-	{
-		var entry = document.createElement('li')
-		entry.innerHTML = '<label class="listitem">' + newWord.value + '</label><button class="destroy"></button>'
-		list.insertBefore(entry, list.childNodes[0])
-		newWord.value = ''
-		updateCount()
-	}
+    if (event.keyCode == 13) addWord(newWord.value)
 })
+
+newWord.onpaste = function(e) {
+	var pastedText = undefined;
+	if (e.clipboardData && e.clipboardData.getData) pastedText = e.clipboardData.getData('text/plain')
+	var pastedWords = pastedText.replace(/\r\n/g, '\n').split('\n')
+	for (var i = 0; i < pastedWords.length; i++) {
+		addWord(pastedWords[i])
+	}
+	return false;
+};

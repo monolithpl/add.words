@@ -11,7 +11,7 @@ Micro component for adding wordlists to your web apps
 - elegant, flat and responsive design
 
 ### screenshot / example
-![screenshot](http://monolithpl.github.io/add.words/add-words.png "screenshot")
+[![add words screenshot](http://monolithpl.github.io/add.words/add-words.png)](http://monolithpl.github.io/add.words)
 
 ### demo
 [check it out here](http://monolithpl.github.io/add.words)
